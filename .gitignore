@@ -1,0 +1,30 @@
+# C++ binaries
+*.o
+*.out
+cpp/solution
+cpp/tests
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archives
+*.zip
+
+# OS
+.DS_Store
+Thumbs.db
