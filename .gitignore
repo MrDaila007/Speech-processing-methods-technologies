@@ -3,6 +3,8 @@
 *.out
 cpp/solution
 cpp/tests
+**/solution
+**/tests
 
 # Python
 __pycache__/
@@ -24,6 +26,10 @@ venv/
 
 # Archives
 *.zip
+
+# Downloaded datasets and local training logs
+Sem3/data/
+train.log
 
 # OS
 .DS_Store

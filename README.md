@@ -2,67 +2,31 @@
 
 Lab assignments for the "Speech Processing Methods & Technologies" course (Master's program).
 
-## Labs
+## Semester 2
 
-| # | Topic | Description |
-|---|-------|-------------|
-| [Lab1](Lab1/) | Discretization | Audio signal conversion to a target sample rate with frequency quantization |
-| [Lab2](Lab2/) | K-Means Algorithm | Plane point clustering with classification quality estimation |
+C++11 and Python 3, standard library only. Run `make test` inside a lab directory.
 
-## Implementation Languages
+| Lab | Topic |
+|-----|--------|
+| [Sem 2/Lab1](Sem%202/Lab1/) | Discretization |
+| [Sem 2/Lab2](Sem%202/Lab2/) | K-Means |
+| [Sem 2/Lab3](Sem%202/Lab3/) | Hidden Markov Model |
+| [Sem 2/Lab4](Sem%202/Lab4/) | Multilayer perceptron |
 
-Each lab is implemented in three languages:
+## Semester 3
 
-- **C++** (C++11)
-- **Python** (3.8+)
-- **R** (4.0+)
+PyTorch, conda environment `base`. Reports are LaTeX sources compiled with `xelatex report.tex`.
 
-## Project Structure
-
-```
-├── Lab1/
-│   ├── task.md           # Task description
-│   ├── README.md         # Overview & results
-│   ├── Makefile
-│   ├── cpp/
-│   ├── python/
-│   └── r/
-├── Lab2/
-│   ├── task.md
-│   ├── README.md
-│   ├── Makefile
-│   ├── cpp/
-│   ├── python/
-│   └── r/
-└── README.md
-```
-
-## Quick Start
+| Lab | Topic |
+|-----|--------|
+| [Sem3/Lab1](Sem3/Lab1/) | Convolutional networks on CIFAR-10 |
+| [Sem3/Lab2](Sem3/Lab2/) | Restricted Boltzmann machines, 8× image compression |
 
 ```bash
-# Lab1 — build and test
-cd Lab1 && make test
-
-# Lab2 — build and test
-cd Lab2 && make test
+source ~/miniconda3/etc/profile.d/conda.sh
+conda activate base
+cd Sem3/Lab1 && python train.py && xelatex report.tex
+cd ../Lab2 && python train.py && xelatex report.tex
 ```
 
-### Available Make Commands
-
-| Command | Action |
-|---------|--------|
-| `make` | Build C++ and Python |
-| `make test` | Run all tests (C++ + Python + R) |
-| `make test-cpp` | C++ tests only |
-| `make test-python` | Python tests only |
-| `make test-r` | R tests only |
-| `make run-cpp` | Run C++ solution |
-| `make run-python` | Run Python solution |
-| `make run-r` | Run R solution |
-| `make clean` | Remove build artifacts |
-
-## Requirements
-
-- `g++` with C++11 support
-- `python3` (3.8+)
-- `Rscript` (4.0+)
+CIFAR-10 is downloaded into `Sem3/data/` on the first run and is not stored in git.

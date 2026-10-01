@@ -37,12 +37,9 @@ Lab2/
 │   ├── kmeans.h         # Core logic
 │   ├── solution.cpp     # Entry point
 │   └── tests.cpp        # Tests
-├── python/
-│   ├── solution.py      # Solution
-│   └── test_solution.py # Tests
-└── r/
-    ├── solution.R       # Solution
-    └── tests.R          # Tests
+└── python/
+    ├── solution.py      # Solution
+    └── test_solution.py # Tests
 ```
 
 ## Usage
@@ -50,7 +47,6 @@ Lab2/
 ```bash
 make run-cpp       # C++
 make run-python    # Python
-make run-r         # R
 make test          # All tests
 ```
 
@@ -98,7 +94,6 @@ With well-separated classes, the algorithm achieves **0% error** — all points 
 |----------|-------|--------|
 | C++ | 833 | Passed |
 | Python | 28 | Passed |
-| R | 34 | Passed |
 
 Test coverage:
 - **Unit**: `euclidean_distance`, `find_nearest_centroid`, `init_centroids`, `assign_clusters`, `update_centroids`, `determine_cluster_class`, `compute_total_distance`, `generate_points`

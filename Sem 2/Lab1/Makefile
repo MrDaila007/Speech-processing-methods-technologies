@@ -1,4 +1,4 @@
-.PHONY: all build-cpp build-python run-cpp run-python run-r test-cpp test-python test-r test clean
+.PHONY: all build-cpp build-python run-cpp run-python test-cpp test-python test clean
 
 all: build-cpp build-python
 
@@ -26,17 +26,9 @@ run-python:
 test-python:
 	cd python && python3 -m unittest test_solution -v
 
-# === R ===
-
-run-r:
-	cd r && Rscript solution.R
-
-test-r:
-	cd r && Rscript tests.R
-
 # === All ===
 
-test: test-cpp test-python test-r
+test: test-cpp test-python
 
 clean:
 	rm -f cpp/solution cpp/tests

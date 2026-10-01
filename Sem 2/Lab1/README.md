@@ -29,12 +29,9 @@ Lab1/
 │   ├── discretization.h # Core logic
 │   ├── solution.cpp     # Entry point
 │   └── tests.cpp        # Tests
-├── python/
-│   ├── solution.py      # Solution
-│   └── test_solution.py # Tests
-└── r/
-    ├── solution.R       # Solution
-    └── tests.R          # Tests
+└── python/
+    ├── solution.py      # Solution
+    └── test_solution.py # Tests
 ```
 
 ## Usage
@@ -42,7 +39,6 @@ Lab1/
 ```bash
 make run-cpp       # C++
 make run-python    # Python
-make run-r         # R
 make test          # All tests
 ```
 
@@ -96,7 +92,6 @@ The average value of ~10,010 Hz is close to the expected mean of a uniform distr
 |----------|-------|--------|
 | C++ | 49 | Passed |
 | Python | 32 | Passed |
-| R | 36 | Passed |
 
 Test coverage:
 - **Unit**: `quantize`, `compute_step`, `generate_signal`, `validate_params`

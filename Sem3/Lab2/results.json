@@ -1,0 +1,201 @@
+{
+  "torch": "2.9.1+cu128",
+  "gpu": "NVIDIA GeForce RTX 3060",
+  "epochs": 8,
+  "batch_size": 256,
+  "mean": 0.4808100759983063,
+  "std": 0.23916137218475342,
+  "train_patches": 800000,
+  "test_patches": 160000,
+  "runs": [
+    {
+      "architecture_id": "gb",
+      "architecture": "ГБ 8$\\times$",
+      "note": "одна машина Гаусс--Бернулли, одинаковое число нейронов",
+      "layers": [
+        {
+          "hidden": 64,
+          "kind": "gauss"
+        }
+      ],
+      "algorithm": "CD-1",
+      "compression_ratio": 8.0,
+      "code_bits": 64,
+      "mse": 0.02072290073633194,
+      "psnr": 17.73985526123047,
+      "ssim": 0.5846334730148316
+    },
+    {
+      "architecture_id": "gb",
+      "architecture": "ГБ 8$\\times$",
+      "note": "одна машина Гаусс--Бернулли, одинаковое число нейронов",
+      "layers": [
+        {
+          "hidden": 64,
+          "kind": "gauss"
+        }
+      ],
+      "algorithm": "CD-10",
+      "compression_ratio": 8.0,
+      "code_bits": 64,
+      "mse": 0.018480690717697142,
+      "psnr": 18.21081159057617,
+      "ssim": 0.5960551777839661
+    },
+    {
+      "architecture_id": "gb",
+      "architecture": "ГБ 8$\\times$",
+      "note": "одна машина Гаусс--Бернулли, одинаковое число нейронов",
+      "layers": [
+        {
+          "hidden": 64,
+          "kind": "gauss"
+        }
+      ],
+      "algorithm": "PCD",
+      "compression_ratio": 8.0,
+      "code_bits": 64,
+      "mse": 0.018436355763673782,
+      "psnr": 18.22122268676758,
+      "ssim": 0.5958887934684753
+    },
+    {
+      "architecture_id": "gb-bb",
+      "architecture": "ГБ 4$\\times$ + ББ 2$\\times$",
+      "note": "Гаусс--Бернулли с 4-кратным сжатием и Бернулли--Бернулли с 2-кратным",
+      "layers": [
+        {
+          "hidden": 128,
+          "kind": "gauss"
+        },
+        {
+          "hidden": 64,
+          "kind": "bern"
+        }
+      ],
+      "algorithm": "CD-1",
+      "compression_ratio": 8.0,
+      "code_bits": 64,
+      "mse": 0.028838766074180604,
+      "psnr": 16.339730883789063,
+      "ssim": 0.40303109583854674
+    },
+    {
+      "architecture_id": "gb-bb",
+      "architecture": "ГБ 4$\\times$ + ББ 2$\\times$",
+      "note": "Гаусс--Бернулли с 4-кратным сжатием и Бернулли--Бернулли с 2-кратным",
+      "layers": [
+        {
+          "hidden": 128,
+          "kind": "gauss"
+        },
+        {
+          "hidden": 64,
+          "kind": "bern"
+        }
+      ],
+      "algorithm": "CD-10",
+      "compression_ratio": 8.0,
+      "code_bits": 64,
+      "mse": 0.026645712620019912,
+      "psnr": 16.655335842895507,
+      "ssim": 0.4103782205104828
+    },
+    {
+      "architecture_id": "gb-bb",
+      "architecture": "ГБ 4$\\times$ + ББ 2$\\times$",
+      "note": "Гаусс--Бернулли с 4-кратным сжатием и Бернулли--Бернулли с 2-кратным",
+      "layers": [
+        {
+          "hidden": 128,
+          "kind": "gauss"
+        },
+        {
+          "hidden": 64,
+          "kind": "bern"
+        }
+      ],
+      "algorithm": "PCD",
+      "compression_ratio": 8.0,
+      "code_bits": 64,
+      "mse": 0.025183752846717835,
+      "psnr": 16.868742428588867,
+      "ssim": 0.41784778990745547
+    },
+    {
+      "architecture_id": "gb-bb-bb",
+      "architecture": "ГБ 2$\\times$ + две ББ 2$\\times$",
+      "note": "Гаусс--Бернулли с 2-кратным сжатием и две Бернулли--Бернулли с 2-кратным",
+      "layers": [
+        {
+          "hidden": 256,
+          "kind": "gauss"
+        },
+        {
+          "hidden": 128,
+          "kind": "bern"
+        },
+        {
+          "hidden": 64,
+          "kind": "bern"
+        }
+      ],
+      "algorithm": "CD-1",
+      "compression_ratio": 8.0,
+      "code_bits": 64,
+      "mse": 0.03637138550281525,
+      "psnr": 15.533561499023438,
+      "ssim": 0.32696627197265626
+    },
+    {
+      "architecture_id": "gb-bb-bb",
+      "architecture": "ГБ 2$\\times$ + две ББ 2$\\times$",
+      "note": "Гаусс--Бернулли с 2-кратным сжатием и две Бернулли--Бернулли с 2-кратным",
+      "layers": [
+        {
+          "hidden": 256,
+          "kind": "gauss"
+        },
+        {
+          "hidden": 128,
+          "kind": "bern"
+        },
+        {
+          "hidden": 64,
+          "kind": "bern"
+        }
+      ],
+      "algorithm": "CD-10",
+      "compression_ratio": 8.0,
+      "code_bits": 64,
+      "mse": 0.03551743993163109,
+      "psnr": 15.627609674072266,
+      "ssim": 0.3341956314086914
+    },
+    {
+      "architecture_id": "gb-bb-bb",
+      "architecture": "ГБ 2$\\times$ + две ББ 2$\\times$",
+      "note": "Гаусс--Бернулли с 2-кратным сжатием и две Бернулли--Бернулли с 2-кратным",
+      "layers": [
+        {
+          "hidden": 256,
+          "kind": "gauss"
+        },
+        {
+          "hidden": 128,
+          "kind": "bern"
+        },
+        {
+          "hidden": 64,
+          "kind": "bern"
+        }
+      ],
+      "algorithm": "PCD",
+      "compression_ratio": 8.0,
+      "code_bits": 64,
+      "mse": 0.0246442875623703,
+      "psnr": 16.939614179992677,
+      "ssim": 0.35573131899833677
+    }
+  ]
+}
